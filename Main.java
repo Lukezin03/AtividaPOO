@@ -18,9 +18,14 @@ class Aluno
     disciplinas.add (disciplina);
   }
 
-  public void imprimir ()
+  public void imprimir() 
   {
-    System.out.println ("Aluno: " + nome);
+    System.out.println("Aluno: " + nome);
+    System.out.println("Disciplinas:");
+    for (Disciplina disciplina : disciplinas) {
+      System.out.println("- " + disciplina.getNome());
+    }
+    System.out.println();
   }
 }
 
@@ -41,9 +46,14 @@ class Curso
     disciplinas.add (disciplina);
   }
 
-  public void imprimir ()
+  public void imprimir() 
   {
-    System.out.println ("Curso: " + nome);
+    System.out.println("Curso: " + nome);
+    System.out.println("Disciplinas:");
+    for (Disciplina disciplina : disciplinas) {
+      System.out.println("- " + disciplina.getNome());
+    }
+    System.out.println();
   }
 }
 
@@ -64,9 +74,14 @@ class Professor
     disciplinas.add (disciplina);
   }
 
-  public void imprimir ()
+  public void imprimir() 
   {
-    System.out.println ("Professor: " + nome);
+    System.out.println("Professor: " + nome);
+    System.out.println("Disciplinas:");
+    for (Disciplina disciplina : disciplinas) {
+      System.out.println("- " + disciplina.getNome());
+    }
+    System.out.println();
   }
 }
 
@@ -96,9 +111,19 @@ class Disciplina
     cursos.add (curso);
   }
 
-  public void imprimir ()
+  public void imprimir() 
   {
-    System.out.println ("Disciplina: " + nome);
+    System.out.println("Disciplina: " + nome);
+    System.out.println("Professor: " + professor.getNome());
+    System.out.println("Alunos:");
+    for (Aluno aluno : alunos) {
+      System.out.println("- " + aluno.getNome());
+    }
+    System.out.println("Cursos:");
+    for (Curso curso : cursos) {
+      System.out.println("- " + curso.getNome());
+    }
+    System.out.println();
   }
 }
 
